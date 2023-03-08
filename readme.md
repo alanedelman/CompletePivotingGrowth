@@ -1,7 +1,6 @@
 **Matrices and code to accompany** (files in .jld (julia data) format, we may put in text files some day)
 
-SOME NEW RESULTS ON THE MAXIMUM GROWTH FACTOR IN
-GAUSSIAN ELIMINATION
+# SOME NEW RESULTS ON THE MAXIMUM GROWTH FACTOR IN GAUSSIAN ELIMINATION
 by Alan Edelman and John Urschel
 
 Understanding  and bounding the growth factor for Gaussian elimination has 
