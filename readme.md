@@ -10,3 +10,5 @@ especially in the context of complete pivoting.  This may seem even more surpris
 as the problem has been around for more than six decades.
 
 ![plot](./growthratio.png)
+
+Remark: filenames format example: n11_11p0504.jld  means there is an 11x11 matrix with growth 11.0504 
