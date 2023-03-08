@@ -1,4 +1,4 @@
-Matrices and code to accompany 
+Matrices and code to accompany (files in .jld (julida data) format, may put in text files some day)
 
 SOME NEW RESULTS ON THE MAXIMUM GROWTH FACTOR IN
 GAUSSIAN ELIMINATION
