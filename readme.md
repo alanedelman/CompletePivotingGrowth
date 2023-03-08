@@ -1,4 +1,4 @@
-Matrices and code to accompany (files in .jld (julida data) format, may put in text files some day)
+Matrices and code to accompany (files in .jld (julida data) format, we may put in text files some day)
 
 SOME NEW RESULTS ON THE MAXIMUM GROWTH FACTOR IN
 GAUSSIAN ELIMINATION
@@ -10,3 +10,4 @@ beautiful problems that is quite easy to state, and yet we still know so very li
 especially in the context of complete pivoting.  This may seem even more surprising
 as the problem has been around for more than six decades.
 
+![plot](./growthratio.png)
