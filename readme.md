@@ -2,6 +2,7 @@
 
 # SOME NEW RESULTS ON THE MAXIMUM GROWTH FACTOR IN GAUSSIAN ELIMINATION
 by Alan Edelman and John Urschel
+([https://arxiv.org/abs/2303.04892](https://arxiv.org/abs/2303.04892))
 
 Understanding  and bounding the growth factor for Gaussian elimination has 
 intrigued mathematical numerical linear algebraists for many decades.  It is one of those
