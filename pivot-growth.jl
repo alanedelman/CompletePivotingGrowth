@@ -109,7 +109,7 @@ end
 
 # maximize pivot growth for real matrix with complete pivoting
 function run_model(n)
-    model = Model(with_optimizer(Ipopt.Optimizer))
+    model = Model(Ipopt.Optimizer)
     indices = [ (i, j, k) for k = 1:n for i = k:n for j = k:n]
 
     startmatrix = randn(n, n)
@@ -120,7 +120,7 @@ function run_model(n)
     @variable(model, x[i=indices], start = thestart[i[1],i[2],i[3]]  ) # random starts
     for k in 1:(n - 1), i in (k + 1):n, j in (k + 1:n)
         @NLconstraint(model, 
-        x[(i, j, k + 1)] - x[(i, j, k)]  +  x[(i, k, k)] * x[(k, j, k)] / x[(k, k, k)] == 0 ) 
+        x[(k, k, k)] *( x[(i, j, k + 1)] - x[(i, j, k)] ) +  x[(i, k, k)] * x[(k, j, k)]  == 0 ) 
     end
     for k = 1:n
         @constraint(model, x[(k, k, k)] ≥ 0)
@@ -149,7 +149,7 @@ end
 
 # maximize pivot growth for real matrix with rook pivoting
 function run_rook_model(n)
-    model = Model(with_optimizer(Ipopt.Optimizer))
+    model = Model(Ipopt.Optimizer)
     indices = [ (i, j, k) for k = 1:2 for i = 1:n for j = 1:n]
     # Create a start matrix
     startmatrix = randn(n, n)
