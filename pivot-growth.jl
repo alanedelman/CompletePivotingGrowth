@@ -214,7 +214,8 @@ function findmax_models(
     howmany;  # total number of models to be generated (across all workers)
     n,
     ncores=typemax(Int),  # (maximum) number of core to be used
-    th=IntervalThrottle(5), # preview for each 10 seconds by default
+    #th=IntervalThrottle(5), # preview for each 10 seconds by default
+    th =5,
     T=T
 )
     prev_maxobj = Ref{Any}(nothing)
@@ -230,10 +231,12 @@ function findmax_models(
         end
         prev_maxobj[] = maxobj
         if flag1
-            show(stdout, "text/plain", best)
+            show(stdout, "text/plain", Float64.(best))
             println()
-            @info "Preview" now() maxobj 
-            show(stdout, "text/plain", best)
+            @info "Preview" now() Float64(maxobj)
+            show(stdout, "text/plain",Float64.(best))
+            println()
+        
         else
             @info "No Change"   # now()
         end
